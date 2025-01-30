@@ -1,10 +1,10 @@
-# PostgreSQL Data Governance Notebooks
+# PostgreSQL Data Governance and Privacy Techniques
 
-This repository contains Jupyter notebooks that demonstrate key principles of **Data Governance** using **PostgreSQL**. The examples cover database management, user access control, and best practices for securing sensitive data.
+This repository contains Jupyter notebooks that demonstrate various **data governance and privacy techniques** using **PostgreSQL**. The examples cover database management, user access control, pseudonymization, perturbation, suppression, and other privacy-preserving techniques.
 
 ## 📌 Notebooks Included
 
-### 1️⃣ **PostgreSQL Data Governance - English Version**
+### 1️⃣ **PostgreSQL Data Governance - Auto DB Creation**
    - Automatically creates a PostgreSQL database if it does not exist.
    - Manages user roles and privileges.
    - Implements access control for a `patients` table.
@@ -14,10 +14,20 @@ This repository contains Jupyter notebooks that demonstrate key principles of **
    - Similar to the first notebook but with **different sample data**.
    - Useful for testing new security policies with varied datasets.
 
-### 3️⃣ **PostgreSQL Privileges Management**
-   - Demonstrates how to create and manage user roles in PostgreSQL.
-   - Shows how to revoke and grant permissions on specific tables.
-   - Simulates different access levels for healthcare professionals.
+### 3️⃣ **PostgreSQL Pseudonymization**
+   - Demonstrates pseudonymization techniques for sensitive data.
+   - Uses hashing to anonymize patient names and countries.
+   - Ensures compliance with privacy regulations while preserving usability.
+
+### 4️⃣ **PostgreSQL Data Perturbation**
+   - Introduces controlled noise into numerical fields (e.g., medical expenses).
+   - Ensures that data remains statistically useful while preventing re-identification.
+   - Useful for privacy-preserving analytics and research.
+
+### 5️⃣ **PostgreSQL Data Suppression**
+   - Suppresses financial data based on predefined thresholds.
+   - Ensures that sensitive data is hidden while maintaining dataset integrity.
+   - Helps enforce compliance with data privacy laws.
 
 ## 🚀 Getting Started
 
@@ -48,10 +58,10 @@ PG_DBNA = 'healthcare_db'  # Database Name
 ```
 Modify these credentials based on your environment.
 
-## 🏥 Use Case: Healthcare Data Governance
+## 🔐 Privacy and Security Techniques
 These notebooks simulate a **healthcare database**, ensuring:
 - Secure access control for different roles (Nurses, Doctors, Consultants).
-- Protection of patient records with proper privilege management.
+- Protection of patient records with pseudonymization, suppression, and perturbation.
 - Compliance with **data privacy regulations**.
 
 ## 📜 License
